@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amit Gaddi - Senior Software Engineer | React, Java, AWS Expert</title>
+  <meta name="description" content="Senior Software Engineer with 5+ years of experience in React, Java/Spring Boot, and AWS. Master’s in Information Technology from University of Cincinnati.">
+  <meta name="keywords" content="Senior Software Engineer, React, Java, Spring Boot, AWS, Full-Stack Developer, Amit Gaddi, Software Development">
+  <meta property="og:title" content="Amit Gaddi - Senior Software Engineer Portfolio">
+  <meta property="og:description" content="Explore the portfolio of Amit Gaddi, a Senior Software Engineer skilled in React, Java, and AWS.">
+  <meta property="og:image" content="profile.JPG">
+  <meta property="og:url" content="https://amitgaddi.com">
+  <link rel="icon" href="">
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+    --background: #f9f9f9; /* Soft light background */
+    --text: #444444; /* Darker text for better readability */
+    --accent: #6c757d; /* Soft gray-blue for accents */
+    --secondary: #e9ecef; /* Light gray for sections */
+    --transition: all 0.2s ease; /* Softer transition */
+    }
+
+    body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    }
+
+    header {
+    position: fixed;
+    top: 0;
+    background-color: var(--background);
+    border-bottom: 1px solid var(--secondary);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Retained box shadow for depth */
+    }
+
+    header h1 {
+    margin: 0;
+    font-size: 24px;
+    transition: color var(--transition);
+    }
+
+    header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--text);
+    transition: color var(--transition);
+    position: relative;
+    }
+
+    header nav a:hover {
+    color: var(--accent); /* Underline effect on hover */
+    }
+
+    .container {
+    max-width: 800px;
+    margin: 80px auto 20px;
+    padding: 20px;
+    }
+
+    .section {
+    padding: 40px 0;
+    transition: background-color var(--transition);
+    }
+
+
+    h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--text);
+    position: relative;
+    }
+
+    h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+    margin-top: 10px;
+    }
+
+    p {
+    font-size: 16px;
+    }
+
+    ul {
+    list-style: none;
+    padding: 0;
+    }
+
+    .skills-category {
+    margin-bottom: 20px;
+    }
+
+    .skills-category h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    }
+
+    .skills-category ul {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+    .skills-category li {
+    background-color: var(--secondary);
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: transform var(--transition); /* Retained lift effect on hover */
+    }
+
+    .skills-category li:hover {
+    transform: translateY(-2px); /* Softer lift effect */
+    }
+
+    .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Retained shadow for modern appearance */
+    }
+
+    a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color var(--transition);
+    }
+
+    a:hover {
+    text-decoration: underline; /* Soft underline on hover */
+    }
+
+    html {
+    scroll-behavior: smooth;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { useEffect } = React;
+
+    const Header = () => {
+      return (
+        <header>
+          <h1>Amit Gaddi</h1>
+          <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#awards">Awards</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </header>
+      );
+    };
+
+    const About = () => {
+      return (
+        <section id="about" className="section">
+          <img src="profile.JPG" alt="Amit Gaddi" className="profile-picture" />
+          <h2>About Me</h2>
+          <p>I’m Amit Gaddi, a Senior Software Engineer with over 5 years of experience specializing in React, Java/Spring Boot, and AWS. I recently earned a Master’s in Information Technology from the University of Cincinnati with a perfect 4.0 GPA. Passionate about building scalable, user-focused web applications, I’m eager to contribute my expertise to innovative teams.</p>
+        </section>
+      );
+    };
+
+    const Skills = () => {
+      const skills = {
+        "Frontend": ["React.js", "JavaScript", "HTML/CSS", "TypeScript", "CSS", "TailwindCSS"],
+        "Backend & Programming": ["Node.js", "Java/J2EE", "Spring Boot", "Python", "Spring MVC", "Microservices", "Hibernate", "ORM", "PHP", "XML"],
+        "DevOps & Cloud": ["AWS"],
+        "Databases": ["SQL"],
+        "Testing & Tools": ["Selenium"],
+        "Methodologies & Practices": ["Agile"]
+      };
+      return (
+        <section id="skills" className="section">
+          <h2>Technical Skills</h2>
+          {Object.entries(skills).map(([category, skillList]) => (
+            <div key={category} className="skills-category">
+              <h3>{category}</h3>
+              <ul>
+                {skillList.map(skill => <li key={skill}>{skill}</li>)}
+              </ul>
+            </div>
+          ))}
+        </section>
+      );
+    };
+
+    const Experience = () => {
+      const jobs = [
+        {
+          company: "Givaudan",
+          title: "Software Engineer Intern",
+          duration: "Oct 2024 - Present",
+          description: "Currently developing scalable web applications using React and AWS, collaborating with cross-functional teams to deliver high-quality solutions."
+        },
+        {
+          company: "Accenture",
+          title: "Senior Software Engineer",
+          duration: "Dec 2018 - Jul 2023",
+          description: "Led the design and development of enterprise-level applications using Java, Spring Boot, and React, improving system performance by 30%."
+        },
+        {
+          company: "Center for Development of Advanced Computing",
+          title: "Software Engineer Intern",
+          duration: "May 2016 - Jun 2016",
+          description: "Supported the creation of web applications using Java and SQL, contributing to a government-funded project."
+        }
+      ];
+      return (
+        <section id="experience" className="section">
+          <h2>Professional Experience</h2>
+          {jobs.map(job => (
+            <div key={job.company} className="experience-entry">
+              <h3>{job.title} at {job.company}</h3>
+              <p>{job.duration}</p>
+              <p>{job.description}</p>
+            </div>
+          ))}
+        </section>
+      );
+    };
+
+    const Education = () => {
+      return (
+        <section id="education" className="section">
+          <h2>Education</h2>
+          <p><strong>University of Cincinnati</strong><br />Master of Science in Information Technology, Aug 2024<br />GPA: 4.0/4.0</p>
+        </section>
+      );
+    };
+
+    const Awards = () => {
+      return (
+        <section id="awards" className="section">
+          <h2>Awards & Honors</h2>
+          <ul>
+            <li>Graduate Incentive Award (GIA), University of Cincinnati, 2024</li>
+            <li>Pinnacle Award - Rising Star, Accenture, 2022</li>
+          </ul>
+        </section>
+      );
+    };
+
+    const Certifications = () => {
+      return (
+        <section id="certifications" className="section">
+          <h2>Certifications</h2>
+          <p>Amazon Web Services Certified Developer - Associate, Aug 2020 – Aug 2023</p>
+        </section>
+      );
+    };
+
+    const Hobbies = () => {
+      return (
+        <section id="hobbies" className="section">
+          <h2>Hobbies & Interests</h2>
+          <p>Reading books, attending TED Talks, exploring new technologies, cooking</p>
+        </section>
+      );
+    };
+
+    const Contact = () => {
+      return (
+        <section id="contact" className="section">
+          <h2>Contact Me</h2>
+          <p>Phone: <a href="tel:+15133990204">+1 (513) 399-0204</a></p>
+          <p>Email: <a href="mailto:amit.gaddi@outlook.com">amit.gaddi@outlook.com</a></p>
+          <p>LinkedIn: <a href="https://linkedin.com/in/amitgaddi" target="_blank" rel="noopener noreferrer">linkedin.com/in/amitgaddi</a></p>
+          <p>GitHub: <a href="https://github.com/gaddiat" target="_blank" rel="noopener noreferrer">github.com/gaddiat</a></p>
+        </section>
+      );
+    };
+
+    const App = () => {
+      return (
+        <div className="container">
+          <Header />
+          <About />
+          <Skills />
+          <Experience />
+          <Education />
+          <Awards />
+          <Certifications />
+          <Hobbies />
+          <Contact />
+        </div>
+      );
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
